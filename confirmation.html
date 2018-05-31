@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>E-Commerce</title>
+      <meta name="description" content="E-Commerce Website">
+      <link rel="stylesheet" href="css/confirmation.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   </head>
+   <body>
+      <div class="container">
+         <div class="row confirmation-title"><img src="images/logo.png" alt=""></div>
+         <div class="row confirmation-body">
+            <div class="col-sm-6  col-md-6 col-md-offset-1">
+               <button class="accordion">1- Sign in</button>
+               <div class="panel">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <h4>New Member</h4>
+                        <h6>Checkout using just your email address:</h6>
+                        <div class="form-group">
+                           <label for="exampleInputEmail1">Email address *</label>
+                           <input type="email" class="form-control" id="confirmation-email-btn" aria-describedby="emailHelp" placeholder="Enter email">
+                           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <button type="button" class="btn btn-info" id="confirmation-guest-btn">Continue as Guest</button>
+                     </div>
+                     <span class="border"></span>
+                     <div class="col-md-6">
+                        <h4>Login to your account</h4>
+                        <h6>If you have an existing account,login below:</h6>
+                        <div class="form-group">
+                           <label for="exampleInputEmail1">Email address *</label>
+                           <input type="email" class="form-control" id="confirmation-email-btn" aria-describedby="emailHelp" placeholder="Enter email">
+                           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                           <label for="exampleInputPassword1">Password *</label>
+                           <input type="password" class="form-control" id="confirmation-password-btn" placeholder="Password">
+                        </div>
+                        <button type="button" class="btn btn-info" id="confirmation-login-btn">Login</button>
+                     </div>
+                  </div>
+               </div>
+               <button class="accordion">2- SHIP TO</button>
+               <div class="panel">
+                  <div class="row shippment">
+                     <h4>New Shipping Address</h4>
+                     <div class="col-md-6 offset-md-6">
+                        <div class="form-group">
+                           <label for="confirmation-name-btn">Full Name *</label>
+                           <input type="text" class="form-control" id="confirmation-name-btn" placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                           <label for="confirmation-contact-btn">Contact Number *</label>
+                           <input type="text" class="form-control" id="confirmation-contact-btn" placeholder="Enter your Contact Number">
+                        </div>
+                        <div class="form-group">
+                           <label for="confirmation-add-btn">Address *</label>
+                           <input type="text" class="form-control" id="confirmation-add-btn" placeholder="Enter your Address">
+                        </div>
+                        <div class="form-group">
+                           <label for="confirmation-city-btn">City *</label>
+                           <input type="text" class="form-control" id="confirmation-city-btn" placeholder="Enter your city">
+                        </div>
+                     </div>
+                  </div>
+                  <button type="button" class="btn btn-info" id="confirmation-payment-proceed-btn">Proceed to Payment</button>
+               </div>
+               <button class="accordion">3- PAYMENT</button>
+               <div class="panel">
+                  <div class="radio">
+                     <label><input type="radio" name="optradio" onclick="hide();" >Cash On Delivery <span>The additional fee for this service is 2 KWD.</span></label>
+                  </div>
+                  <div class="radio">
+                     <label><input type="radio" name="optradio" onclick="hide();">PayPal</label>
+                  </div>
+                  <div class="radio ">
+                     <label><input type="radio" name="optradio" onclick="show();" checked>Credit/Debit Card Payment <span>(We accept Visa and MasterCard)</span></label>
+                  </div>
+                  <div class="col-md-8 col-md-offset-2">
+                     <div  id="card">
+                        <form role="form" >
+                           <div class="form-group">
+                              <label for="username">Full name (on the card)</label>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                 </div>
+                                 <input type="text" class="form-control" name="username" placeholder="" required="">
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="cardNumber">Card number</label>
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
+                                 </div>
+                                 <input type="text" class="form-control" name="cardNumber" placeholder="">
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-sm-8">
+                                 <div class="form-group">
+                                    <label><span class="hidden-xs">Expiration</span> </label>
+                                    <div class="form-inline">
+                                       <select class="form-control" style="width:45%">
+                                          <option>MM</option>
+                                          <option>01 - Janiary</option>
+                                          <option>02 - February</option>
+                                          <option>03 - March</option>
+                                          <option>04 - April</option>
+                                          <option>05 - May</option>
+                                          <option>06 - June</option>
+                                          <option>07 - July</option>
+                                          <option>08 - August</option>
+                                          <option>09 - September</option>
+                                       </select>
+                                       <span style="width:10%; text-align: center"> / </span>
+                                       <select class="form-control" style="width:45%">
+                                          <option>YY</option>
+                                          <option>2018</option>
+                                          <option>2019</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-4">
+                                 <div class="form-group">
+                                    <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                    <input class="form-control" required="" type="text">
+                                 </div>
+                              </div>
+                           </div>
+                           <button class="subscribe btn btn-info btn-block" type="button"> Confirm  </button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <button type="button" class="btn btn-info col-md-12" id="final-pay-btn">Confirm Buying</button>
+            </div>
+            <div class="col-sm-6 col-md-4 col-md-offset-1">
+               <div class="review-header">Order Review</div>
+               <div class="review-body">
+                  <div class="row conf-item">
+                     <img src="images/items/1.jpg" class="item-img-confirmation" alt="">
+                     <ul class="conf-item-attr">
+                        <li>Gucci Motor Jacket</li>
+                        <li>Gucci</li>
+                        <li>Size: M</li>
+                        <li>Price: 80 KWD</li>
+                        <li>Quantity:1</li>
+                     </ul>
+                  </div>
+                  <div class="row conf-item">
+                     <img src="images/items/6.jpg" class="item-img-confirmation" alt="">
+                     <ul class="conf-item-attr">
+                        <li>ZARA Casual Dress</li>
+                        <li>Zara</li>
+                        <li>Size: L</li>
+                        <li>Price: 180 KWD</li>
+                        <li>Quantity:1</li>
+                     </ul>
+                  </div>
+                  <hr>
+                  <div >
+                     <ul class="conf-checkout-keyvals">
+                        <li>SubTotal <span class="conf-checkout-val"> 260 KWD</span></li>
+                        <li>Shipping <span class="conf-checkout-val"> Free</span></li>
+                        <li>Discount <span class="conf-checkout-val"> 0</span></li>
+                        <hr>
+                        <li>Total <span class="conf-checkout-val"> 260 KWD</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ********************* Footer *********************************  -->
+      <footer class="footer">
+         <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+               <div class="col-sm-3 col-md-3">
+                  <h5 class="title">E-Commerce</h5>
+                  <p>E-commerce website for all categories of shopping.We offer free shipping on all items and free exchange withing 14 days.</p>
+                  <ul class="social-icon">
+                     <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                     <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                     <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                     <a href="#" class="social"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                  </ul>
+               </div>
+               <div class="col-sm-3 col-md-3">
+                  <h5 class="title">My Account</h5>
+                  <span class="acount-icon">
+                  <a href="#"><i class="fa fa-user" aria-hidden="true"></i> About us</a>
+                  <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Terms & Conditions</a>
+                  <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
+                  <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contact us</a>
+                  </span>
+               </div>
+               <div class="col-sm-3 col-md-3">
+                  <div id="appIcons" class="appIcons">
+                     <h5 class="title">Download App</h5>
+                     <a href="#"><img class="img-responsive" src="images/apple.png" alt=""></a>
+                     <a href="#"><img class="img-responsive" src="images/google.png" alt=""></a>
+                  </div>
+               </div>
+               <div class="col-sm-3 col-md-3">
+                  <h5 class="title">Payment Methods</h5>
+                  <p>We accept various payment methods including cash on delivery,paypal,credit and debit cards.</p>
+                  <ul class="payment">
+                     <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+                  </ul>
+               </div>
+            </div>
+            </div>
+            <hr>
+            <div class="row text-center"> © 2018. Made by Amr Gamal.</div>
+         </div>
+      </footer>
+      <!-- **************************************************************  -->
+      <script src="js/panelAccordion.js"></script>
+      <script src="js/showCard.js"></script>
+   </body>
+</html>

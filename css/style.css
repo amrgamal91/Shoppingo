@@ -127,7 +127,7 @@ transition: all 0.1s ease-in;
   display: table-cell;
   vertical-align: middle;
   float: none;
-}
+}}
 @media (max-width: 767px) {
   div[class^="col-"] {
     margin-bottom: 10px;
@@ -144,6 +144,15 @@ transition: all 0.1s ease-in;
   font-size: 16px;
   height: 35px;
 }
+@media(min-width:767px){
+  .lastBar{
+    background-color: #e5e5e5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    height: 35px;
+  }
+}
+
 /*-------------------------------------------------------------------------*/
 #login-dp {
   min-width: 250px;

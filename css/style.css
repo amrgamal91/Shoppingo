@@ -144,14 +144,17 @@ transition: all 0.1s ease-in;
   font-size: 16px;
   height: 35px;
 }
-@media(min-width:767px){
-  .lastBar{
+.navbar .navbar-collapse {
+    text-align: center;
     background-color: #e5e5e5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    font-size: 16px;
-    height: 35px;
-  }
 }
+.navbar-toggle{
+ float: left !important;
+ padding: 0 !important;
+ margin-left: 2rem !important;
+}
+
+
 
 /*-------------------------------------------------------------------------*/
 #login-dp {

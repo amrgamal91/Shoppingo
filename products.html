@@ -2,6 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>E-Commerce</title>
       <meta name="description" content="E-Commerce Website">
       <link rel="stylesheet" href="css/style.css">
@@ -13,12 +14,13 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head>
+
    <body>
       <!-- header -->
       <header>
          <!-- ******************** TOP_BAR  ******************************  -->
-         <nav class="topBar">
-            <div class="container">
+         <nav class="topBar hidden-xs">
+            <div class="container ">
                <ul class="list-inline pull-left hidden-sm hidden-xs">
                   <li><a href="mobileapp.html" ><i class="fa fa-download"></i>  Download Mobile App </a></li>
                </ul>
@@ -36,22 +38,22 @@
                      </a>
                      <ul class="dropdown-menu w-100" role="menu">
                         <li>
-                           <a href="#"><img src="images/Kuwait.png" class="mr-5" alt="">Kw</a>
+                           <a href="#"><img src="images/Kuwait.png" class="mr-5 img-responsive" alt="">Kw</a>
                         </li>
                         <li class="">
-                           <a href="#"><img src="images/Bahrain.png" class="mr-5" alt="">Bh</span></a>
+                           <a href="#"><img src="images/Bahrain.png" class="mr-5 img-responsive" alt="">Bh</span></a>
                         </li>
                         <li>
-                           <a href="#"><img src="images/Saudi Arabia.png" class="mr-5" alt="">Saudi</a>
+                           <a href="#"><img src="images/Saudi Arabia.png" class="mr-5 img-responsive" alt="">Saudi</a>
                         </li>
                         <li>
-                           <a href="#"><img src="images/UAE.png" class="mr-5" alt="">UAE</a>
+                           <a href="#"><img src="images/UAE.png" class="mr-5 img-responsive" alt="">UAE</a>
                         </li>
                      </ul>
                   </li>
                   <li class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">
-                     <span class="hidden-xs">العربيه</span>
+                     <span class="">العربيه</span>
                      </a>
                      <ul class="dropdown-menu w-100" role="menu">
                         <li>
@@ -64,16 +66,16 @@
          </nav>
          <!-- ***********************************************************  -->
          <!-- *********************** MIDDEL_BAR  ***********************  -->
-         <div class="middleBar">
+         <div class="middleBar hidden-xs">
             <div class="container">
                <div class="row display-table">
-                  <div class="col-sm-3 vertical-align text-left hidden-xs">
-                     <a href="main.html"> <img width="" src="images/logo.png" alt=""></a>
+                  <div class="col-sm-3 col-md-2 vertical-align text-left hidden-xs">
+                     <a href="javascript:void(0);"> <img width="" src="images/logo.png" alt=""></a>
                   </div>
-                  <div class="col-sm-9 vertical-align ">
+                  <div class="col-sm-9 col-md-10 vertical-align ">
                      <form>
                         <div class="row ">
-                           <div class="col-sm-7">
+                           <div class="col-sm-7 col-md-7">
                               <div class="input-group">
                                  <input type="text" name="keyword" class="form-control input-md" placeholder="Search for ...">
                                  <span class="input-group-btn">
@@ -81,7 +83,7 @@
                                  <span class="glyphicon glyphicon-search"></span></button></span>
                               </div>
                            </div>
-                           <div class="col-sm-2">
+                           <div class="col-sm-2 col-md-3">
                               <select class="form-control input-md" name="category">
                                  <option value="all">All Categories</option>
                                  <optgroup label="Mens">
@@ -120,9 +122,14 @@
                                  </optgroup>
                               </select>
                            </div>
-                           <div class="col-sm-3" >
-                              <button type="button" class="btn btn-info btn-md pull-right post-btn">
-                              <span class="glyphicon glyphicon-upload"></span> Post Free Ad</button>
+                           <div class="col-sm-3 col-md-2 hidden-xs" >
+
+                              <a href="#swym-wishlist" class="wishlist">
+                                <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-heart-o"></i>
+                              </a>
+                              <a href="#swym-wishlist" class="shopping-bag">
+                                <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-shopping-bag"></i>
+                              </a>
                            </div>
                         </div>
                      </form>
@@ -132,12 +139,19 @@
          </div>
          <!-- **************************************************************  -->
          <!-- *********************** LAST_BAR  ****************************  -->
-         <div class="lastBar">
-            <nav class="navbar">
-               <div class="collapse navbar-collapse js-navbar-collapse">
+        <div class="lastBar">
+         <nav class="navbar">
+
+              <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#last-navbar">
+                   <span class=" fa fa-bars">  </span>
+                 </button>
+                 <!-- <a href="" class="visible-xs">Collection Category</a> -->
+              </div>
+               <div class="collapse navbar-collapse" id="last-navbar">
                   <ul class="nav navbar-nav">
                      <li class="dropdown mega-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men</span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Men</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
                            <li class="col-sm-2">
                               <ul>
@@ -199,7 +213,7 @@
                               </div>
                            </li>
                         </ul>
-                     </li>
+                     </li><li role="separator" class="divider"></li>
                      <li class="dropdown mega-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
@@ -263,7 +277,7 @@
                               </div>
                            </li>
                         </ul>
-                     </li>
+                     </li><li role="separator" class="divider"></li>
                      <li class="dropdown mega-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kids</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
@@ -327,7 +341,7 @@
                               </div>
                            </li>
                         </ul>
-                     </li>
+                     </li><li role="separator" class="divider"></li>
                      <li class="dropdown mega-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Electronics</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
@@ -391,7 +405,7 @@
                               </div>
                            </li>
                         </ul>
-                     </li>
+                     </li><li role="separator" class="divider"></li>
                      <li class="dropdown mega-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home & LifeStyle</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
@@ -455,7 +469,7 @@
                               </div>
                            </li>
                         </ul>
-                     </li>
+                     </li><li role="separator" class="divider"></li>
                      <li class="dropdown mega-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sports</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
@@ -522,13 +536,16 @@
                      </li>
                   </ul>
                </div>
+
             </nav>
-         </div>
+              </div>
+
          <!-- **************************************************************  -->
       </header>
+
       <div class="container products-container">
          <div class="row">
-            <div class="col-md-3 filter-section ">
+            <div class="ol-md-3 filter-section ">
                <div class="filter-header">Filter By </div>
                <div class="card">
                   <article class="card-group-item">

@@ -93,6 +93,11 @@ hr {
 		height: 185px;
 	}
 }
+@media (max-width: 767px) {
+	.card-wrapper:hover .product-description {
+		height: 225px;
+	}
+}
 
 .image-holder {
 	display: block;

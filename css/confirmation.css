@@ -12,7 +12,11 @@
 	text-align: center;
 	padding: 3em;
 }
-
+#final-pay-btn{
+	margin: 1rem;
+	align-items: center;
+	text-align: center;
+}
 .accordion {
 	background-color: #1CB4D1;
 	color: #fff;

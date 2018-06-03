@@ -142,11 +142,12 @@ transition: all 0.1s ease-in;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 16px;
-  /*below lines push down the content*/
-  min-height: 100%;
-   height: auto !important;
-   margin: 0 auto -30px;
-   padding: 0 0 0px 0px;   /* new padding */
+  height: 35px;
+  /*****below lines push down the content*/
+  /*min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -30px;
+  padding: 0 0 0px 0px;   /* end */*/
 }
 .navbar .navbar-collapse {
     text-align: center;
@@ -158,16 +159,20 @@ transition: all 0.1s ease-in;
  float: left !important;
  padding: 0 !important;
  margin-left: 2rem !important;
+ font-size: 3rem;
+ margin-bottom: 0px !important;
+ margin-top: 0px !important;
 }
 .divider {
     height: 1px;
-    /*margin: 9px 0;*/
     overflow: hidden;
     background-color: #e5e5e5;
 }
 #last-navbar > ul > li{padding: 0px !important;}
 @media screen and (max-width: 765px){
   .navbar-nav > li:first-child{ margin-left: 0px !important;}
+  .lastBar{height: auto !important;}
+  .navbar{margin-bottom: 0px !important;}
 }
 
 /*-------------------------------------------------------------------------*/

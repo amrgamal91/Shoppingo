@@ -1,5 +1,5 @@
 .payment{
-	padding: 2rem;
+	padding: 1rem;
 }
 .payment-title {
 	text-align: center;
@@ -7,7 +7,7 @@
 
 .item-img-payment {
 	border: 1px solid #e5e5e5;
-	width: 7em;
+	width: 7rem;
 	height: auto;
 	margin-left: 5px;
 }
@@ -21,6 +21,7 @@
 
 .payment-col {
 	margin: auto;
+
 }
 
 thead>tr>th {
@@ -32,7 +33,7 @@ th {
 }
 
 #payment-checkout-btn {
-	float: right;
+	/*float: right;*/
 }
 
 .cost-overview {
@@ -81,8 +82,11 @@ th {
 
 .checkout-val {
 	align-items: flex-end;
+
+	text-align: right;
 }
 
 .checkout-val-total {
 	font-weight: bolder;
+	text-align: right;
 }

@@ -23,7 +23,9 @@
 	margin: auto;
 
 }
-
+@media (max-width: 767px) {
+	
+}
 thead>tr>th {
 	font-weight: bold;
 }

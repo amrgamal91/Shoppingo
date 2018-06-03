@@ -285,7 +285,7 @@ hr {
 
 /*featured collection*/
 .hoverEffect {
-  width: 90%;
+  /*width: 90%;*/
   height: 90%;
   overflow: hidden;
 }

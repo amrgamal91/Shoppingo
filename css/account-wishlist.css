@@ -1,0 +1,41 @@
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th{
+  vertical-align: middle !important;
+}
+
+.wl-item-img{
+  width: 60px !important;
+  text-align: center !important;
+}
+
+.media-body{
+  width: auto !important;
+}
+
+.wl-date{
+  vertical-align: middle !important;
+}
+.wl-price{
+  vertical-align: middle !important;
+}
+
+.wl-btns{
+  display: flex;
+  justify-content: space-around;
+}
+.wl-item-icons{
+  vertical-align: middle !important;
+  font-size: 2em;
+}
+.wl-item-remove{
+  color:#FA8072;
+  padding:5px;
+}
+.wl-item-add{
+  color:#1cb4d1;
+  padding:5px;
+}

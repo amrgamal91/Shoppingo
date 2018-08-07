@@ -1,0 +1,16 @@
+.head-border{
+  border-radius: 5px;
+  border:1px solid #fff;
+}
+.custom-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.seprator{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.form-group{
+  float: left;
+}

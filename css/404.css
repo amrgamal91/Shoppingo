@@ -1,0 +1,23 @@
+
+
+
+.separator {
+	width: 90%;
+	height: 3px;
+	background-color: #1CB4D1;
+}
+
+.-title {
+	padding-left: 5%;
+}
+
+.page-title {
+	text-align: center;
+	padding: 1.5em;
+}
+
+.alert{
+  width: 90%;
+margin-left: auto;
+margin-right: auto;
+}

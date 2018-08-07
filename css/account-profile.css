@@ -1,0 +1,83 @@
+.profile-container{
+	margin-bottom: 25px;
+}
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, .125);
+	border-radius: .25rem;
+	margin-bottom: 0 !important;
+}
+
+.user-card {
+	border-bottom: 2px solid #d6d8d9;
+}
+
+.user-card img {
+	margin-right: 10px;
+	width: 5em;
+	height: 5em;
+	padding: 1em;
+}
+
+.rounded-circle {
+	border-radius: 50%!important;
+}
+
+img {
+	vertical-align: middle;
+	border-style: none;
+}
+
+.user-card .user-name {
+	margin-top: .25rem;
+	margin-bottom: 0;
+}
+
+.media {
+	display: flex;
+	flex-direction: row;
+}
+
+.media-body {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.list-group {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0!important;
+}
+
+.seprator {
+	border: 2px solid #1cb4d1;
+  width: 100%;
+}
+
+.user-data {
+	border: 1px solid #d6d8d9;
+	border-radius: 5px;
+	padding-bottom: 15px;
+	/*margin-right: 15px;
+  margin-left: 15px;*/
+}
+
+.profile {
+	margin: 0 auto !important;
+  margin-top: 15px !important;
+}
+
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+	z-index: 2;
+	color: #fff;
+	background-color: #1cb4d1 !important;
+	border-color: #1cb4d1 !important;
+}

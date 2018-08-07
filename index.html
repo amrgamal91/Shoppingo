@@ -125,9 +125,12 @@
                               <a href="#swym-wishlist" class="wishlist">
                                 <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-heart-o"></i>
                               </a>
-                              <a href="#swym-wishlist" class="shopping-bag">
-                                <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-shopping-bag"></i>
-                              </a>
+                              <!-- <div class="cart-container"> -->
+                                <a href="#cartModal" class="shopping-bag" data-toggle="modal">
+                                  <i aria-hidden="true" focusable="false" role="presentation" class="fa fa-shopping-bag"></i>
+                                </a>
+                                <span id="itemCount"></span>
+                              <!-- </div> -->
                            </div>
                         </div>
                      </form>
@@ -149,7 +152,7 @@
                <div class="collapse navbar-collapse" id="last-navbar">
                   <ul class="nav navbar-nav">
                      <li class="dropdown mega-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Men</span></a>
+                        <a href="products.html" class="dropdown-toggle disabled" data-toggle="dropdown" aria-expanded="true">Men</span></a>
                         <ul class="dropdown-menu mega-dropdown-menu">
                            <li class="col-sm-2">
                               <ul>
@@ -544,7 +547,7 @@
       <!-- ********************* CAROUSELE START ************************  -->
       <div class="container">
          <div class="row row-centered">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel" class="carousel slide caption-animate" data-ride="carousel">
                <!-- Indicators -->
                <ol class="carousel-indicators">
                   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -556,19 +559,19 @@
                <div class="carousel-inner" role="listbox">
                   <div class="item active">
                      <img  src="images/img-1.jpg" >
-                     <div class="carousel-caption hidden-xs">
+                     <div class="carousel-caption  hidden-xs">
                         <h4>New Collection for women</h4>
                      </div>
                   </div>
                   <div class="item">
                      <img  src="images/img-2.jpg" >
-                     <div class="carousel-caption hidden-xs">
+                     <div class="carousel-caption bounce hidden-xs">
                         <h4>New Collection of Classic suits</h4>
                      </div>
                   </div>
                   <div class="item">
                      <img  src="images/img-3.jpg" >
-                     <div class="carousel-caption hidden-xs">
+                     <div class="carousel-caption bounce hidden-xs">
                         <h4>New Collection of men Shoes</h4>
                      </div>
                   </div>
@@ -592,6 +595,9 @@
          </div>
       </div>
       <!-- **************************************************************  -->
+  
+
+
       <!-- ********************* Featured Collection ********************  -->
       <div id="firstWrapper">
          <div id="featuredCollection" class="collectionWrapper">
@@ -638,6 +644,7 @@
          </div>
       </div>
       <!-- **************************************************************  -->
+
       <!-- ********************* Popular Adds ***************************  -->
       <div id="secondWrapper">
          <div id="popularAdds" class="popularAdds">
@@ -931,6 +938,7 @@
          </div>
       </div>
       <!-- **************************************************************  -->
+
       <!-- ********************* Footer *********************************  -->
       <footer class="footer">
          <div class="container-fluid">
@@ -949,10 +957,10 @@
                <div class="col-sm-3 col-md-3">
                   <h5 class="title">My Account</h5>
                   <span class="acount-icon">
-                  <a href="#"><i class="fa fa-user" aria-hidden="true"></i> About us</a>
+                  <a href="aboutUs.html"><i class="fa fa-user" aria-hidden="true"></i> About us</a>
                   <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Terms & Conditions</a>
-                  <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
-                  <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contact us</a>
+                  <a href="FAQ.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
+                  <a href="contactUs.html"><i class="fa fa-envelope" aria-hidden="true"></i> Contact us</a>
                   </span>
                </div>
                <div class="col-sm-3 col-md-3">
@@ -979,9 +987,8 @@
          </div>
       </footer>
       <!-- **************************************************************  -->
+
       <!-- ********************* Login Modal ***************************  -->
-
-
       <div  class=" row">
 
          <div id="loginModal" class="modal fade loginModal-content col-sm-8 col-sm-offset-2 col-md-5 col-md-offset-3">
@@ -1030,6 +1037,128 @@
 
       </div>
       <!-- **************************************************************  -->
+
+
+
+
+      <!-- Modal Cart -->
+ <div class="modal fade modal-cart" id="cartModal--" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+   <div class="modal-sm modal-side modal-bottom-right" role="document">
+     <div class="modal-content">
+
+       <div class="modal-header">
+         <h5 class="modal-title" id="cartModalLabel">You have 4 items in your bag</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+
+       <div class="modal-body">
+         <div class="media">
+           <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo1-small.jpg" width="70" alt="Generic placeholder image"></a>
+           <div class="media-body">
+             <div><a href="detail.html" class="text-dark">Burberry The Plymouth Duffle Coat</a></div>
+             <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
+             <button class="close text-danger"><i class="material-icons">close</i></button>
+           </div>
+         </div>
+         <div class="media">
+           <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo2-small.jpg" width="70" alt="Generic placeholder image"></a>
+           <div class="media-body">
+             <div><a href="detail.html" class="text-dark">Fendi Bugs Sweater</a></div>
+             <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
+             <button class="close text-danger"><i class="material-icons">close</i></button>
+           </div>
+         </div>
+         <div class="media">
+           <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo3-small.jpg" width="70" alt="Generic placeholder image"></a>
+           <div class="media-body">
+             <div><a href="detail.html" class="text-dark">Alexander McQueen Classic Piqué Polo Shirt</a></div>
+             <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
+             <button class="close text-danger"><i class="material-icons">close</i></button>
+           </div>
+         </div>
+         <div class="media">
+           <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo4-small.jpg" width="70" alt="Generic placeholder image"></a>
+           <div class="media-body">
+             <div><a href="detail.html" class="text-dark">MCQ Alexander McQueen Swallow Badge Polo Shirt</a></div>
+             <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
+             <button class="close text-danger"><i class="material-icons">close</i></button>
+           </div>
+         </div>
+       </div>
+
+       <div class="modal-footer justify-content-center border-top-0">
+         <div class="btn-group" role="group" aria-label="Cart Action">
+           <!-- <a href="cart.html" class="btn btn-outline-theme" role="button">VIEW CART</a> -->
+           <a href="checkout.html" class="btn btn-theme" role="button">CHECKOUT</a>
+         </div>
+       </div>
+
+     </div>
+   </div>
+ </div>
+
+ <!-- Modal -->
+ <div class="modal fade right" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-side modal-top-right" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="cartModal-title" id="cartModal-label">You have&nbsp;<span id="cartModal-items-count">3 &nbsp;</span> items in your cart</h5>
+                 <button type="button" id="header-close" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+               <div class="media">
+                 <a href="#" class="mr-2"><img class="img-fluid rounded" src="images/items/1.jpg" width="50" alt="item image"></a>
+                 <div class="media-body">
+                   <div><a href="" class="text-dark">JACK-JOHNS Black Jacket </a></div>
+                   <span class="text-secondary">KD 50.00</span>
+
+                   <a href="" class="close remove">remove</a>
+                 </div>
+               </div>
+               <div class="media ">
+                 <a href="#" class="mr-2"><img class="img-fluid rounded" src="images/items/10.jpg" width="50" alt="item image"></a>
+                 <div class="media-body">
+                   <div><a href="" class="text-dark">ZARA Dress for girls </a></div>
+                   <span class="text-secondary">KD 30.00</span>
+                   <!-- <button type="button" class="close dangers" data-dismiss="" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button> -->
+                   <a href="" class="close remove">remove</a>
+                 </div>
+               </div>
+               <div class="media">
+                 <a href="#" class="mr-2"><img class="img-fluid rounded" src="images/items/14.jpg" width="50" alt="item image"></a>
+                 <div class="media-body">
+                   <div><a href="" class="text-dark">Nike Shoes - Model 456</a></div>
+                   <span class="text-secondary">KD 85.00</span>
+                   <!-- <button type="button" class="close danger" data-dismiss="" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button> -->
+                   <a href="" class="close remove">remove</a>
+                 </div>
+               </div>
+
+             </div>
+             <div class="modal-footer">
+               <div class="col-md-4 col-md-offset-8 btn-buy">
+                  <a href="payment.html" class="btn  btn-info form-control cart-checkout"> CHECKOUT </a>
+               </div>
+                 <!-- <button type="button" class="btn  cart-checkout">CHECKOUT</button> -->
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+
+
+
+
+
       <script src="js/app.js"></script>
    </body>
 </html>

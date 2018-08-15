@@ -12,8 +12,10 @@
       <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
 
    </head>
+   <!-- =============================== appdynamics script ================================ -->
    <script charset='UTF-8'>
    window['adrum-start-time'] = new Date().getTime();
    (function(config){
@@ -36,11 +38,12 @@
     + unescape('%3E%3C/script%3E'));
    }
    </script>
+   <!-- =============================== =================== ================================ -->
    <body>
       <div class="container">
          <div class="row confirmation-title"><img src="images/logo.png" alt=""></div>
          <div class="row confirmation-body">
-            <div class="col-sm-6  col-md-6 col-md-offset-1">
+            <div class="col-sm-6  col-md-8">
                <button class="accordion">1- Sign in</button>
                <div class="panel">
                   <div class="row">
@@ -55,6 +58,7 @@
                         <button type="button" class="btn btn-info" id="confirmation-guest-btn">Continue as Guest</button>
                      </div>
                      <span class="border"></span>
+
                      <div class="col-md-6">
                         <h4>Login to your account</h4>
                         <h6>If you have an existing account,login below:</h6>
@@ -75,26 +79,37 @@
                <div class="panel">
                   <div class="row shippment">
                      <h4>New Shipping Address</h4>
-                     <div class="col-md-6 offset-md-6">
-                        <div class="form-group">
-                           <label for="confirmation-name-btn">Full Name *</label>
-                           <input type="text" class="form-control" id="confirmation-name-btn" placeholder="Enter your full name">
-                        </div>
-                        <div class="form-group">
-                           <label for="confirmation-contact-btn">Contact Number *</label>
-                           <input type="text" class="form-control" id="confirmation-contact-btn" placeholder="Enter your Contact Number">
-                        </div>
-                        <div class="form-group">
-                           <label for="confirmation-add-btn">Address *</label>
-                           <input type="text" class="form-control" id="confirmation-add-btn" placeholder="Enter your Address">
-                        </div>
-                        <div class="form-group">
-                           <label for="confirmation-city-btn">City *</label>
-                           <input type="text" class="form-control" id="confirmation-city-btn" placeholder="Enter your city">
-                        </div>
+                     <div class="col-md-10 offset-md-2">
+                        <form class="form-horizontal" action="" id="ship_to">
+                          <div class="form-group ">
+                             <label class="control-label col-md-4" for="confirmation-name-btn">Full Name :</label>
+                             <div class="col-md-8">
+                               <input type="text" class="form-control" id="confirmation-name-btn" placeholder="Enter your full name" name="full_Name">
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="control-label col-md-4"  for="confirmation-contact-btn">Contact Number :</label>
+                             <div class="col-md-8 form-control-static">
+                               <input class="form-control" id="confirmation-contact-btn" placeholder="phone number ex: +965 1111 1111" type="tel"  name="contact_Number"  >
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label class="control-label col-md-4"  for="confirmation-add-btn">Address :</label>
+                             <div class="col-md-8">
+                               <input type="text" class="form-control" id="confirmation-add-btn" placeholder="Enter your Address" name="address">
+                             </div>
+                          </div>
+                          <div class="form-group">
+                             <label  class="control-label col-md-4" for="confirmation-city-btn">City :</label>
+                             <div class="col-md-8">
+                               <input type="text" class="form-control" id="confirmation-city-btn" placeholder="Enter your city" name="city">
+                             </div>
+                          </div>
+                          <button type="submit" class="btn btn-info center-block" id="confirmation-payment-proceed-btn">Proceed to Payment</button>
+                      </form>
                      </div>
                   </div>
-                  <button type="button" class="btn btn-info" id="confirmation-payment-proceed-btn">Proceed to Payment</button>
+
                </div>
                <button class="accordion">3- PAYMENT</button>
                <div class="panel">
@@ -107,68 +122,67 @@
                   <div class="radio ">
                      <label><input type="radio" name="optradio" onclick="show();" checked>Credit/Debit Card Payment <span>(We accept Visa and MasterCard)</span></label>
                   </div>
-                  <div class="col-md-8 col-md-offset-2">
-                     <div  id="card">
-                        <form role="form" >
+                  <div class="col-md-12">
+                     <div id="card">
+                        <form class="form-horizontal" role="form" >
+
                            <div class="form-group">
-                              <label for="username">Full name (on the card)</label>
-                              <div class="input-group">
-                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
-                                 </div>
+                              <label  class="control-label col-md-5" for="username"><i class="fa fa-user"></i> Full name (on the card) : </label>
+                              <div class="input-group col-md-5">
                                  <input type="text" class="form-control" name="username" placeholder="" required="">
                               </div>
                            </div>
+
                            <div class="form-group">
-                              <label for="cardNumber">Card number</label>
-                              <div class="input-group">
-                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-credit-card"></i></span>
-                                 </div>
+                              <label class="control-label col-md-5" for="cardNumber"><i class="fa fa-credit-card"></i> Card number : </label>
+                              <div class="input-group col-md-5">
                                  <input type="text" class="form-control" name="cardNumber" placeholder="">
                               </div>
                            </div>
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <div class="form-group">
-                                    <label><span class="hidden-xs">Expiration</span> </label>
-                                    <div class="form-inline">
-                                       <select class="form-control" style="width:45%">
-                                          <option>MM</option>
-                                          <option>01 - Janiary</option>
-                                          <option>02 - February</option>
-                                          <option>03 - March</option>
-                                          <option>04 - April</option>
-                                          <option>05 - May</option>
-                                          <option>06 - June</option>
-                                          <option>07 - July</option>
-                                          <option>08 - August</option>
-                                          <option>09 - September</option>
-                                       </select>
-                                       <span style="width:10%; text-align: center"> / </span>
-                                       <select class="form-control" style="width:45%">
-                                          <option>YY</option>
-                                          <option>2018</option>
-                                          <option>2019</option>
-                                       </select>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="form-group">
-                                    <label data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
-                                    <input class="form-control" required="" type="text">
-                                 </div>
+
+                           <div class="form-group expiration">
+                              <label class="control-label col-md-5 col-sm-5" for=""> Expiration : </label>
+                              <div class="input-group col-md-5 col-sm-5 ex-selects">
+                                <select class="form-control ex col-sm-3">
+                                    <option>MM</option>
+                                    <option>1-Jan</option>
+                                    <option>2-Feb</option>
+                                    <option>3-Mar</option>
+                                    <option>4-Apr</option>
+                                    <option>5-May</option>
+                                    <option>6-Jun</option>
+                                    <option>7-Jul</option>
+                                    <option>8-Aug</option>
+                                    <option>9-Sep</option>
+                                    <option>10-Oct</option>
+                                    <option>11-Nov</option>
+                                    <option>12-Dec</option>
+                                 </select>
+                                 <select class="form-control ex col-sm-2" >
+                                     <option>YY</option>
+                                     <option>2018</option>
+                                     <option>2019</option>
+                                     <option>2020</option>
+                                     <option>2021</option>
+                                 </select>
                               </div>
                            </div>
-                           <button class="subscribe btn btn-info btn-block" type="button"> Confirm  </button>
+
+                           <div class="form-group">
+                              <label class="control-label col-md-5" data-toggle="tooltip" title="" data-original-title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i> : </label>
+                              <div class="input-group col-md-5">
+                                 <input type="text" class="form-control" name="CCV" placeholder="">
+                              </div>
+                           </div>
+
                         </form>
                      </div>
                   </div>
+                   <button id="final-pay-btn" class="btn btn-info center-block " type="submit"> Confirm  </button>
                </div>
 
             </div>
-            <div class="col-sm-6 col-md-4 col-md-offset-1">
+            <div class="col-sm-6 col-md-4 ">
                <div class="review-header">Order Review</div>
                <div class="review-body">
                   <div class="row conf-item">
@@ -203,13 +217,7 @@
                   </div>
                </div>
             </div>
-            <div>
-              <div class="row">
-                <div class="col-sm-4 col-sm-offset-4">
-                  <button type="button" class="btn btn-info" id="final-pay-btn">Confirm Buying</button>
-                </div>
-              </div>
-            </div>
+
          </div>
       </div>
       <!-- ********************* Footer *********************************  -->
@@ -260,6 +268,7 @@
          </div>
       </footer>
       <!-- **************************************************************  -->
+      <script src="js/confirmation-payment-Validation.js"></script>
       <script src="js/panelAccordion.js"></script>
       <script src="js/showCard.js"></script>
    </body>

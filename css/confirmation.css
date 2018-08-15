@@ -10,18 +10,19 @@
 
 .confirmation-title {
 	text-align: center;
-	padding: 3em;
+	padding: .5em;
 }
 #final-pay-btn{
-	margin: 1rem;
-	align-items: center;
-	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-right: 5rem;
+	padding-left: 5rem;
 }
 .accordion {
 	background-color: #1CB4D1;
 	color: #fff;
 	cursor: pointer;
-	padding: 18px;
+	padding: 7px;
 	width: 100%;
 	border: none;
 	text-align: left;
@@ -53,6 +54,7 @@
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
+	border:2px solid #F3F3F3 !important;
 }
 
 #confirmation-login-btn {
@@ -67,6 +69,7 @@
 	margin-bottom: 1em;
 	margin-top: 1em;
 	text-align: center;
+
 }
 
 .hide {
@@ -81,8 +84,8 @@
 .review-header {
 	background-color: #1CB4D1;
 	text-align: center;
-	padding: 18px;
-	font-weight: bold;
+	padding: 7px;
+	/*font-weight: bold;*/
 	color: #fff;
 }
 
@@ -93,7 +96,7 @@
 .item-img-confirmation {
 	border: 1px solid #e5e5e5;
 	width: 4em;
-	height: 7em;
+	height: 6em;
 }
 
 .conf-item {
@@ -104,6 +107,7 @@
 
 .conf-item-attr {
 	list-style: none;
+	font-size: 1.3rem;
 }
 
 .conf-checkout-keyvals {
@@ -116,4 +120,12 @@
 	;
 	padding-right: 6em;
 	font-weight: normal;
+}
+.ex{
+	margin-bottom:10px !important;
+	margin-right:5px !important;
+}
+.ex-selects{
+	display: inline-flex !important;
+	justify-content: space-around !important;
 }

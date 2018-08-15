@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('#reg_form').bootstrapValidator({
+	$('#ship_to').bootstrapValidator({
 			// To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
 			feedbackIcons: {
 				valid: 'glyphicon glyphicon-ok',
@@ -7,59 +7,41 @@ $(document).ready(function () {
 				validating: 'glyphicon glyphicon-refresh'
 			},
 			fields: {
-				first_Name: {
+				full_Name: {
 					validators: {
 						stringLength: {
-							min: 2,
+							min: 7,
+              message:'please enter full name'
 						},
 						notEmpty: {
-							message: 'First Name Required'
+							message: 'Full Name Required'
 						}
 					}
 				},
-				last_Name: {
-					validators: {
-						stringLength: {
-							min: 2,
-						},
-						notEmpty: {
-							message: 'Last Name is Required'
-						}
-					}
-				},
-				email: {
+				contact_Number: {
 					validators: {
 						notEmpty: {
-							message: 'Please supply your email address'
+							message: 'Contact number is required'
 						},
-						emailAddress: {
-							message: 'Please supply a valid email address'
-						}
+            phone:{
+              // country:'KU',
+              message: 'enter valid phone number'}
 					}
 				},
-				password: {
+				address: {
 					validators: {
-						identical: {
-							field: 'confirmPassword',
-							message: 'Confirm your password below - type same password please'
-						},
             notEmpty: {
-							message: 'Please supply a valid Password'
+							message: 'Address is Required'
 						}
 					}
 				},
-				confirmPassword: {
-					validators: {
-						identical: {
-							field: 'password',
-							message: 'The password and its confirm are not the same'
-						},
+        city: {
+          validators: {
             notEmpty: {
-							message: 'Please Confirm the Password'
-						}
-
-					}
-				},
+              message: 'City is Required'
+            }
+          }
+        }
 			}
 		})
 
@@ -68,7 +50,7 @@ $(document).ready(function () {
 			$('#success_message').slideDown({
 				opacity: "show"
 			}, "slow")
-			$('#reg_form').data('bootstrapValidator').resetForm();
+			$('#ship_to').data('bootstrapValidator').resetForm();
 
 			// Prevent form submission
 			e.preventDefault();
